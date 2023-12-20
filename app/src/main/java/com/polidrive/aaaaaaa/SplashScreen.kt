@@ -1,8 +1,6 @@
 package com.polidrive.aaaaaaa
 
-import android.window.SplashScreen
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.gestures.transformable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -15,7 +13,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import com.polidrive.aaaaaaa.Navigation.AppScreens
 import kotlinx.coroutines.delay
@@ -23,7 +20,7 @@ import kotlinx.coroutines.delay
 @Composable
 fun SplashScreen(navController: NavHostController){
     LaunchedEffect(key1 = true){
-        delay(5000)
+        delay(3000)
         navController.popBackStack()
         navController.navigate(AppScreens.MainScreen.route)
     }

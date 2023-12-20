@@ -78,7 +78,7 @@ fun MainScreen(navController: NavController) {
                     fontWeight = FontWeight.Bold
                 )
                 //Spacer(modifier = Modifier.height(10.dp))
-                Correo()
+                Correo(navController)
                 Spacer(modifier = Modifier.height(20.dp))
 
                 Row(Modifier.fillMaxWidth(),
@@ -114,7 +114,7 @@ fun Image() {
 }
 
 @Composable
-fun Correo() {
+fun Correo(navController: NavController) {
     val context = LocalContext.current
 
     var email by remember { mutableStateOf(" ") }
@@ -158,7 +158,8 @@ fun Correo() {
                     RowLoginButton(
                         context = context,
                         isValidEmail = isValidEmail,
-                        isValidPasword
+                        isValidPasword,
+                        navController
                     )
 
                 }
@@ -258,7 +259,8 @@ fun RowPassword(
 fun RowLoginButton(
     context: Context,
     isValidEmail: Boolean,
-    isValidPassword: Boolean
+    isValidPassword: Boolean,
+    navController: NavController
 ){
     Row(
         Modifier
@@ -268,7 +270,9 @@ fun RowLoginButton(
     ){
         Button(
             modifier = Modifier.fillMaxWidth(),
-            onClick = { login(context) },
+            onClick = { login(context)
+                        navController.navigate(route = AppScreens.Pantalla4.route)
+                      },
             enabled = isValidPassword && isValidEmail
         ) {
             Text(text = " Iniciar Sesión ")
