@@ -25,6 +25,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -86,7 +87,10 @@ fun MainScreen(navController: NavController) {
                         horizontalArrangement = Arrangement.Center){
                         Text(text = "     ")
                         Button(
-                            onClick = { navController.navigate(route = AppScreens.Pantalla1.route) }) {
+                            onClick = { navController.navigate(route = AppScreens.Pantalla1.route)
+                            },
+                            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF880B56))
+                        ) {
                             Text(text = "Registrate!!")
 
                         }
@@ -278,7 +282,8 @@ fun RowLoginButton(
             onClick = { login(context)
                         navController.navigate(route = AppScreens.Pantalla4.route)
                       },
-            enabled = isValidPassword && isValidEmail
+            enabled = isValidPassword && isValidEmail,
+
         ) {
             Text(text = " Iniciar Sesión ")
         }
