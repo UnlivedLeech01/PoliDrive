@@ -38,6 +38,7 @@ fun FourthScreen(navController: NavController){
                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF090808))) {
                     Text(text = "Cerrar Sesión")
 
+
                 }
 
             }

@@ -284,6 +284,7 @@ fun RowLoginButton(
                       },
             enabled = isValidPassword && isValidEmail,
 
+
         ) {
             Text(text = " Iniciar Sesión ")
         }

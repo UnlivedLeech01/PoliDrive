@@ -40,6 +40,7 @@ fun SecondScreen(navController: NavController){
                         colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF880B56))) {
                         Text(text = "Siguiente")
 
+
                     }
 
                 }
