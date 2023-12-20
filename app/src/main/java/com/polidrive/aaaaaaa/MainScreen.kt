@@ -81,22 +81,27 @@ fun MainScreen(navController: NavController) {
                 Correo(navController)
                 Spacer(modifier = Modifier.height(20.dp))
 
-                Row(Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.Center){
-                    Text(text = "     ")
-                    Button(
-                        onClick = { navController.navigate(route = AppScreens.Pantalla1.route) }) {
-                        Text(text = "Registrate!!")
+                Box(modifier = Modifier.fillMaxSize()){
+                    Row(Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.Center){
+                        Text(text = "     ")
+                        Button(
+                            onClick = { navController.navigate(route = AppScreens.Pantalla1.route) }) {
+                            Text(text = "Registrate!!")
+
+                        }
 
                     }
-
                 }
 
                 Box(modifier = Modifier.fillMaxSize()) {
                     androidx.compose.foundation.Image(
                         painter = painterResource(id = R.drawable.polidrivelogo),
                         contentDescription = "Logo",
-                        modifier = Modifier.size(275.dp).clip(CircleShape).align(Alignment.Center))
+                        modifier = Modifier
+                            .size(275.dp)
+                            .clip(CircleShape)
+                            .align(Alignment.Center))
                 }
 
 

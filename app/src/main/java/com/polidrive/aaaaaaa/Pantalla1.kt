@@ -1,6 +1,7 @@
 package com.polidrive.aaaaaaa
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -24,19 +25,21 @@ fun FirstScreen (navController: NavController){
         modifier = Modifier.fillMaxSize()
     )
     Column {
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(665.dp))
         Row(Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.Center){
             Text(text = "     ")
-            Row(Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.Center){
-                Text(text = "    ")
-                Button(
-                    onClick = { navController.navigate(route = AppScreens.Pantalla5.route) }) {
-                    Text(text = "Siguiente")
+            Box(Modifier.fillMaxWidth()){
+                Row(Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.End){
+                    Text(text = "    ")
+                    Button(
+                        onClick = { navController.navigate(route = AppScreens.Pantalla5.route) }) {
+                        Text(text = "Siguiente")
+
+                    }
 
                 }
-
             }
         }
     }
