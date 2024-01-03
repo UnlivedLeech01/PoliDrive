@@ -61,6 +61,7 @@ fun FirstScreen1() {
         }
     }
 }
+//ODIO ESTA MATERIA
 @Composable
 fun RowNombre(
     nombre: String,
@@ -70,7 +71,7 @@ fun RowNombre(
         Modifier
             .fillMaxWidth()
             .padding(10.dp),
-        horizontalArrangement = Arrangement.Center
+        horizontalArrangement = Arrangement.Start
     )
     {
         OutlinedTextField(
