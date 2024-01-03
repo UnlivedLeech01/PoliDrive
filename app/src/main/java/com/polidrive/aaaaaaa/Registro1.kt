@@ -22,14 +22,17 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 
 @Composable
-fun FirstScreen1() {
+fun FirstScreen1(navController : NavController) {
     var nombre by remember { mutableStateOf(" ") }
     Column {
         Box(modifier = Modifier
@@ -62,6 +65,7 @@ fun FirstScreen1() {
     }
 }
 //ODIO ESTA MATERIA
+
 @Composable
 fun RowNombre(
     nombre: String,
@@ -72,34 +76,32 @@ fun RowNombre(
             .fillMaxWidth()
             .padding(10.dp),
         horizontalArrangement = Arrangement.Start
-    )
-    {
+    ) {
         OutlinedTextField(
             value = nombre,
             onValueChange = nombreChange,
-            label = { Text(text = "Nombre Completo") },
+            placeholder = {
+                Text("Nombre Completo")
+            },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
             maxLines = 1,
             singleLine = true,
             colors = TextFieldDefaults.outlinedTextFieldColors(
-                    focusedLabelColor = Color.Green,
-                    focusedBorderColor = Color.Green
-                )
-
+                focusedLabelColor = Color.Green,
+                focusedBorderColor = Color.Green
+            )
         )
-        Text(text = " ")
     }
-
-
 }
 
-@Preview(
-    showBackground = true
-)
-@Composable
-fun PreviewPantalladeRegistro1() {
-    FirstScreen1()
-}
+
+//@Preview(
+  //  showBackground = true
+// )
+//@Composable
+//fun PreviewPantalladeRegistro1() {
+  //  FirstScreen1()
+//}
 
 
 

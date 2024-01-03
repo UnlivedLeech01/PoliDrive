@@ -87,7 +87,7 @@ fun MainScreen(navController: NavController) {
                         horizontalArrangement = Arrangement.Center){
                         Text(text = "     ")
                         Button(
-                            onClick = { navController.navigate(route = AppScreens.Pantalla1.route)
+                            onClick = { navController.navigate(route = AppScreens.REGISTRO.route)
                             },
                             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF880B56))
                         ) {

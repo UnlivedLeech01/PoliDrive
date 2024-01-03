@@ -5,6 +5,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.polidrive.aaaaaaa.FirstScreen
+import com.polidrive.aaaaaaa.FirstScreen1
 import com.polidrive.aaaaaaa.FourthScreen
 import com.polidrive.aaaaaaa.MainScreen
 import com.polidrive.aaaaaaa.MainScreen1
@@ -37,6 +38,9 @@ fun AppNavigation(){
         }
         composable(AppScreens.Pantalla5.route){
             MainScreen1(navController)
+        }
+        composable(AppScreens.REGISTRO.route){
+            FirstScreen1(navController)
         }
     }
 }

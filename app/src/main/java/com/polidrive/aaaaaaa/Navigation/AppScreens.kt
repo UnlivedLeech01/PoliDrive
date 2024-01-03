@@ -8,5 +8,6 @@ sealed class AppScreens(val route: String){
     object Pantalla3: AppScreens("pantalla_3")
     object Pantalla4: AppScreens("pantalla_4")
     object Pantalla5: AppScreens("pantalla_5")
+    object REGISTRO: AppScreens("pantalla_registro")
 
 }
