@@ -1,5 +1,5 @@
 @file:OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3Api::class,
-    ExperimentalMaterial3Api::class
+    ExperimentalMaterial3Api::class, ExperimentalMaterial3Api::class
 )
 
 package com.polidrive.aaaaaaa
@@ -117,10 +117,7 @@ fun MainScreen(navController: NavController) {
     }
 }
 
-@Composable
-fun Image() {
 
-}
 
 @Composable
 fun Correo(navController: NavController) {
