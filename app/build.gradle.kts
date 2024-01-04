@@ -69,4 +69,6 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     implementation ("androidx.compose.material:material-icons-core:<compose_version>")
     implementation ("androidx.compose.material:material-icons-extended:<compose_version>")
+    implementation ("com.google.maps.android:maps-compose:2.11.4")
+    implementation ("com.google.android.gms:play-services-maps:18.1.0")
 }
