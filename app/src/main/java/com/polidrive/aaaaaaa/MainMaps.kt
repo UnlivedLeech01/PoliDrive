@@ -41,6 +41,7 @@ fun MainMapScreen(){
             Image(painter = painterResource(id = R.drawable.baseline_face_white_24), contentDescription = "Carita blanca",
                  )
         }
+        MapScreen()
     }
 }
 
@@ -48,7 +49,7 @@ fun MainMapScreen(){
 fun MapScreen(){
     val escom = LatLng(19.504841431557495, -99.14630154688206)
     val cameraPositionState = rememberCameraPositionState {
-        position = CameraPosition.fromLatLngZoom(escom, 30f)
+        position = CameraPosition.fromLatLngZoom(escom, 15f)
     }
     GoogleMap(
         modifier = Modifier.fillMaxSize(),
@@ -56,8 +57,8 @@ fun MapScreen(){
     ) {
         Marker(
             state = MarkerState(position = escom),
-            title = "Singapore",
-            snippet = "Marker in Singapore"
+            title = "Escom",
+            snippet = ""
         )
     }
 }
