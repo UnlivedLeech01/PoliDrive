@@ -19,6 +19,7 @@ import com.google.android.gms.maps.model.PolylineOptions
 import com.google.maps.android.compose.GoogleMap
 import com.google.maps.android.compose.Marker
 import com.google.maps.android.compose.MarkerState
+import com.google.maps.android.compose.Polyline
 import com.google.maps.android.compose.rememberCameraPositionState
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -42,7 +43,7 @@ fun MainMapScreen() {
                     start = "${selectedMarkers[1].longitude},${selectedMarkers[1].latitude}"
                     end = "${selectedMarkers[2].longitude},${selectedMarkers[2].latitude}"
                     // Aquí iría la lógica para crear y mostrar la ruta
-                    createRoute()
+
                 }
             },
             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF880B56))
@@ -58,13 +59,34 @@ fun MainMapScreen() {
 
 @Composable
 fun MapScreen(onMarkerAdded: (LatLng) -> Unit) {
+    var selectedMarkers by remember { mutableStateOf(listOf<LatLng>()) }
+    var start:String=""
+    var end:String=""
+
+    //Lista con coordenadas
+    var routePoints by remember { mutableStateOf(listOf<LatLng>()) }
+
     val escom = LatLng(19.504841431557495, -99.14630154688206)
     val conductor = LatLng(19.60154401792762, -99.04025319106024)
     val pasajero = LatLng(19.570988301429786, -99.06338216354723)
     val cameraPositionState = rememberCameraPositionState {
         position = CameraPosition.fromLatLngZoom(escom, 15f)
     }
+    Button(
+        onClick = {
+            // Implementar la lógica para crear la ruta usando los marcadores seleccionados
+            if (selectedMarkers.size >= 3) {
+                start = "${selectedMarkers[1].longitude},${selectedMarkers[1].latitude}"
+                end = "${selectedMarkers[2].longitude},${selectedMarkers[2].latitude}"
+                // Aquí iría la lógica para crear y mostrar la ruta
 
+            }
+        },
+        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF880B56))
+    ) {
+        Text(text = "Dios Ayudame:(")
+        routePoints = createRoute()
+    }
     GoogleMap(
         modifier = Modifier.fillMaxSize(),
         cameraPositionState = cameraPositionState,
@@ -79,27 +101,32 @@ fun MapScreen(onMarkerAdded: (LatLng) -> Unit) {
                 state = MarkerState(position = location),
                 title = "Marcador",
                 snippet = ""
+
             )
+            Polyline(points = routePoints)
         }
     }
 }
 
 
-fun createRoute(){
+fun createRoute():List<LatLng>{
     CoroutineScope(Dispatchers.IO).launch{
-        val call = getRetrofit().create(ApiService::class.java).getRoute("","","")
+        val call = getRetrofit().create(ApiService::class.java).getRoute("5b3ce3597851110001cf6248dab664ccc8a543caa4beefa356a82bc8","","")
         if(call.isSuccessful){
             drawRoute(call.body())
         }else{
 
         }
     }
+    return emptyList()
 }
 
 fun drawRoute(routeResponse: RouteResponse?) {
     val polylineOptions = PolylineOptions()
     routeResponse?.features?.first()?.geometry?.coordinates?.forEach{
-        polylineOptions.add(LatLng(it[1], it[0]))
+        //polylineOptions.add(LatLng(it[1], it[0]))
+        //Polyline(points = LatLng(it[1], it[0]))
+        
     }
 
 }
