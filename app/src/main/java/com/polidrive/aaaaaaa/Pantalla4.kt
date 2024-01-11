@@ -34,9 +34,9 @@ fun FourthScreen(navController: NavController){
                 horizontalArrangement = Arrangement.End){
                 Text(text = "    ")
                 Button(
-                    onClick = { navController.navigate(route = AppScreens.MainScreen.route) },
+                    onClick = { navController.navigate(route = AppScreens.CONDUCTORES.route) },
                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF090808))) {
-                    Text(text = "Cerrar Sesión")
+                    Text(text = "Conductores")
 
 
                 }

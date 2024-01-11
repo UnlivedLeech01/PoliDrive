@@ -14,6 +14,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.navigation.NavController
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.PolylineOptions
@@ -31,7 +32,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 
 @Composable
-fun MainMapScreen() {
+fun MainMapScreen(navController: NavController) {
     var selectedMarkers by remember { mutableStateOf(listOf<LatLng>()) }
     var start:String=""
     var end:String=""
@@ -43,16 +44,15 @@ fun MainMapScreen() {
         Box() {
             MapScreen(onMarkerAdded = { latLng ->
                 selectedMarkers = listOf(latLng) + selectedMarkers.take(2)
-
-
-            })
+                }, navController
+            )
         }
 
     }
 }
 
 @Composable
-fun MapScreen(onMarkerAdded: (LatLng) -> Unit) {
+fun MapScreen(onMarkerAdded: (LatLng) -> Unit, navController: NavController) {
     var selectedMarkers by remember { mutableStateOf(listOf<LatLng>()) }
     var start:String=""
     var end:String=""
