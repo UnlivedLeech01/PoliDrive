@@ -27,10 +27,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.polidrive.aaaaaaa.R
 
 @Composable
-fun pantallaMenuRegistroPasajero4 (){
+fun pantallaMenuRegistroPasajero4 (navController: NavController){
 
     Box(
         modifier = Modifier
@@ -253,10 +254,5 @@ fun datosPerfilPasajero4() {
     }//Aqui
 }
 
-@Preview(showBackground = true)
-@Composable
-fun pantallaRegistroPreviewPasajero4()
-{
-    pantallaMenuRegistroPasajero4()
-}
+
 
