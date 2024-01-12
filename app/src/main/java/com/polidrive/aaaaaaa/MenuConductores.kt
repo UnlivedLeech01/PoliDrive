@@ -87,7 +87,7 @@ fun driverList(navController: NavController) {
                     ) {
                         //Auto
                         Button(
-                            onClick = { navController.navigate(route = AppScreens.CONDUCTORES.route) },
+                            onClick = { },
                             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000))
 
                         ) {
@@ -95,7 +95,7 @@ fun driverList(navController: NavController) {
                         }
                         //Ruta
                         Button(
-                            onClick = { /*Aqui vamos al perfil*/
+                            onClick = { navController.navigate(route = AppScreens.Ruta1.route)
                             },
                             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000))
 
