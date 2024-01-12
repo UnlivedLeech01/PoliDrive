@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -27,8 +26,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavController
-import com.polidrive.aaaaaaa.Navigation.AppScreens
 
 
 @Composable
@@ -59,6 +56,7 @@ fun pantallaMenuRegistro (){
                 }
 
                 datosPerfil()
+
                 Spacer(modifier = Modifier.height(350.dp))
 
                 Row(Modifier.fillMaxWidth(),
@@ -91,6 +89,7 @@ fun datosPerfil() {
         Row(horizontalArrangement = Arrangement.SpaceBetween) {
             Column {
                 // Nombre del usuario
+                Spacer(modifier = Modifier.height(10.dp)) // Espaciado de 45dp
                 Text(
                     text = "Nombre del usuario",
                     modifier = Modifier
@@ -159,9 +158,12 @@ fun datosPerfil() {
                     fontSize = 20.sp,
                     color = Color.White,
                 )
+                Spacer(modifier = Modifier.height(10.dp)) // Espaciado de 45dp
+
             }
             Column {
                 // Rol
+                Spacer(modifier = Modifier.height(10.dp)) // Espaciado de 45dp
                 Text(
                     text = "Rol",
                     modifier = Modifier
@@ -230,9 +232,11 @@ fun datosPerfil() {
                     fontSize = 20.sp,
                     color = Color.White,
                 )
+                Spacer(modifier = Modifier.height(10.dp)) // Espaciado de 45dp
+
             }
         }
-    }
+    }//Aqui
 }
 
     @Preview(showBackground = true)

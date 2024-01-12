@@ -15,8 +15,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.PolylineOptions
@@ -40,10 +42,6 @@ fun MainMapScreen(navController: NavController) {
     var start:String=""
     var end:String=""
     Column {
-        // ... tu UI existente ...
-
-
-
         Box() {
             MapScreen(onMarkerAdded = { latLng ->
                 selectedMarkers = listOf(latLng) + selectedMarkers.take(2)
@@ -95,6 +93,11 @@ fun MapScreen(onMarkerAdded: (LatLng) -> Unit, navController: NavController) {
             Text(text = "Calcular Ruta")
             //routePoints = createRoute()
         }
+        val context = LocalContext.current
+
+
+
+
         Box(modifier = Modifier.height(700.dp)){
             GoogleMap(
                 modifier = Modifier.fillMaxSize(),
@@ -104,12 +107,14 @@ fun MapScreen(onMarkerAdded: (LatLng) -> Unit, navController: NavController) {
                     onMarkerAdded(latLng)
                 }
             ) {
+
                 // Marcadores predefinidos
                 listOf(escom, conductor, pasajero).forEach { location ->
                     Marker(
                         state = MarkerState(position = location),
                         title = "Marcador",
-                        snippet = ""
+                        snippet = "",
+                        icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE),
 
                     )
                     Polyline(points = listOf(escom, conductor, pasajero))
@@ -128,6 +133,7 @@ fun MapScreen(onMarkerAdded: (LatLng) -> Unit, navController: NavController) {
                             state = MarkerState(position = routePoints[routePoints.size / 2]),
                             title = "Distancia y tiempo",
                             snippet = "$kilometros km. / $minutos min. "
+                            //icon = BitmapDescriptorFactory.fromBitmap(/*imagen*/ )
                         )
                     }
                 }
