@@ -1,4 +1,5 @@
 package com.polidrive.aaaaaaa.Pasajeros
+
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -17,7 +18,6 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -30,7 +30,7 @@ import androidx.compose.ui.unit.sp
 import com.polidrive.aaaaaaa.R
 
 @Composable
-fun pantallaMenuRegistroPasajero1 (){
+fun pantallaMenuRegistroPasajero4 (){
 
     Box(
         modifier = Modifier
@@ -50,7 +50,7 @@ fun pantallaMenuRegistroPasajero1 (){
                     )
                     Spacer(modifier = Modifier.width(130.dp))
                     Image(
-                        painter = painterResource(id = R.drawable.hombrechinos),
+                        painter = painterResource(id = R.drawable.gatopaisaje),
                         contentDescription = "foto de perfil",
                         modifier = Modifier
                             .size(80.dp)
@@ -59,7 +59,7 @@ fun pantallaMenuRegistroPasajero1 (){
                     Spacer(modifier = Modifier.width(10.dp))
                 }
 
-                datosPerfilPasajero1()
+                datosPerfilPasajero4()
 
                 Spacer(modifier = Modifier.height(320.dp))
 
@@ -93,7 +93,7 @@ fun pantallaMenuRegistroPasajero1 (){
 
 }
 @Composable
-fun datosPerfilPasajero1() {
+fun datosPerfilPasajero4() {
     Spacer(modifier = Modifier.height(30.dp))
     Box(
         modifier = Modifier
@@ -105,7 +105,7 @@ fun datosPerfilPasajero1() {
                 // Nombre del usuario
                 Spacer(modifier = Modifier.height(10.dp)) // Espaciado de 45dp
                 Text(
-                    text = "Marco Antonio",
+                    text = "Fernanda Michelle",
                     modifier = Modifier
                         .background(
                             color = Color(0xFF880B56),
@@ -119,7 +119,7 @@ fun datosPerfilPasajero1() {
                 Spacer(modifier = Modifier.height(45.dp)) // Espaciado de 45dp
                 // Teléfono
                 Text(
-                    text = "5589784856",
+                    text = "5528487989",
                     modifier = Modifier
                         .background(
                             color = Color(0xFF880B56),
@@ -133,7 +133,7 @@ fun datosPerfilPasajero1() {
                 Spacer(modifier = Modifier.height(45.dp)) // Espaciado de 45dp
                 // Correo Institucional
                 Text(
-                    text = "mnavarr@alumno.ipn",
+                    text = "fdoming@alumno.ipn",
                     modifier = Modifier
                         .background(
                             color = Color(0xFF880B56),
@@ -147,7 +147,7 @@ fun datosPerfilPasajero1() {
                 Spacer(modifier = Modifier.height(45.dp)) // Espaciado de 45dp
                 // Dirección
                 Text(
-                    text = "Cerca de Misterios",
+                    text = "Cerca de Lindavista",
                     modifier = Modifier
                         .background(
                             color = Color(0xFF880B56),
@@ -179,7 +179,7 @@ fun datosPerfilPasajero1() {
                 // Rol
                 Spacer(modifier = Modifier.height(10.dp)) // Espaciado de 45dp
                 Text(
-                    text = "Navarro Urrutia",
+                    text = "Dominguez Moreno",
                     modifier = Modifier
                         .background(
                             color = Color(0xFF880B56),
@@ -193,7 +193,7 @@ fun datosPerfilPasajero1() {
                 Spacer(modifier = Modifier.height(45.dp)) // Espaciado de 45dp
                 // Apellidos
                 Text(
-                    text = "Pasajero",
+                    text = "Pasajera",
                     modifier = Modifier
                         .background(
                             color = Color(0xFF880B56),
@@ -207,7 +207,7 @@ fun datosPerfilPasajero1() {
                 Spacer(modifier = Modifier.height(45.dp)) // Espaciado de 45dp
                 // No. Boleta
                 Text(
-                    text = "2019265645",
+                    text = "2020564889",
                     modifier = Modifier
                         .background(
                             color = Color(0xFF880B56),
@@ -221,7 +221,7 @@ fun datosPerfilPasajero1() {
                 Spacer(modifier = Modifier.height(45.dp)) // Espaciado de 45dp
                 // Edad
                 Text(
-                    text = "24",
+                    text = "22 años",
                     modifier = Modifier
                         .background(
                             color = Color(0xFF880B56),
@@ -255,8 +255,8 @@ fun datosPerfilPasajero1() {
 
 @Preview(showBackground = true)
 @Composable
-fun pantallaRegistroPreviewPasajero1()
+fun pantallaRegistroPreviewPasajero4()
 {
-    pantallaMenuRegistroPasajero1()
+    pantallaMenuRegistroPasajero4()
 }
 
