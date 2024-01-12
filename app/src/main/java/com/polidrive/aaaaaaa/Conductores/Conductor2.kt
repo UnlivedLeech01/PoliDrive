@@ -32,7 +32,7 @@ import com.polidrive.aaaaaaa.R
 
 
 @Composable
-fun pantallaMenuRegistroConductor1 (){
+fun pantallaMenuRegistroConductor2 (){
 
     Box(
         modifier = Modifier
@@ -52,7 +52,7 @@ fun pantallaMenuRegistroConductor1 (){
                     )
                     Spacer(modifier = Modifier.width(130.dp))
                     Image(
-                        painter = painterResource(id = R.drawable.ni_asonrisa),
+                        painter = painterResource(id = R.drawable.personamujer),
                         contentDescription = "foto de perfil",
                         modifier = Modifier
                             .size(80.dp)
@@ -61,13 +61,13 @@ fun pantallaMenuRegistroConductor1 (){
                     Spacer(modifier = Modifier.width(10.dp))
                 }
 
-                datosPerfilConductor1()
+                datosPerfilConductor2()
                 Row(horizontalArrangement = Arrangement.Center){
                     Spacer(modifier = Modifier.width(50.dp))
                     Box() {
                         androidx.compose.foundation.Image(
-                            painter = painterResource(id = R.drawable.elbochido),
-                            contentDescription = "ElBochigod",
+                            painter = painterResource(id = R.drawable.jeep_),
+                            contentDescription = "JeepMamalona",
                             modifier = Modifier
                                 .size(275.dp)
                                 .clip(CircleShape)
@@ -108,7 +108,7 @@ fun pantallaMenuRegistroConductor1 (){
 
 }
 @Composable
-fun datosPerfilConductor1() {
+fun datosPerfilConductor2() {
     Spacer(modifier = Modifier.height(30.dp))
     Box(
         modifier = Modifier
@@ -120,7 +120,7 @@ fun datosPerfilConductor1() {
                 // Nombre del usuario
                 Spacer(modifier = Modifier.height(10.dp)) // Espaciado de 45dp
                 Text(
-                    text = "Wendy",
+                    text = "Brenda",
                     modifier = Modifier
                         .background(
                             color = Color(0xFF880B56),
@@ -134,7 +134,7 @@ fun datosPerfilConductor1() {
                 Spacer(modifier = Modifier.height(45.dp)) // Espaciado de 45dp
                 // Teléfono
                 Text(
-                    text = "5526263636",
+                    text = "5578894556",
                     modifier = Modifier
                         .background(
                             color = Color(0xFF880B56),
@@ -148,7 +148,7 @@ fun datosPerfilConductor1() {
                 Spacer(modifier = Modifier.height(45.dp)) // Espaciado de 45dp
                 // Correo Institucional
                 Text(
-                    text = "wsmithw@alumno.ipn",
+                    text = "bperezp@alumno.ipn",
                     modifier = Modifier
                         .background(
                             color = Color(0xFF880B56),
@@ -162,7 +162,7 @@ fun datosPerfilConductor1() {
                 Spacer(modifier = Modifier.height(45.dp)) // Espaciado de 45dp
                 // Dirección
                 Text(
-                    text = "Cerca de Cuautepec",
+                    text = "Cerca de Polanco",
                     modifier = Modifier
                         .background(
                             color = Color(0xFF880B56),
@@ -176,7 +176,7 @@ fun datosPerfilConductor1() {
                 Spacer(modifier = Modifier.height(45.dp)) // Espaciado de 45dp
                 // Horario debajo de Dirección
                 Text(
-                    text = "Bochito 1990",
+                    text = "Jeep 2023",
                     modifier = Modifier
                         .background(
                             color = Color(0xFF880B56),
@@ -194,7 +194,7 @@ fun datosPerfilConductor1() {
                 // Rol
                 Spacer(modifier = Modifier.height(10.dp)) // Espaciado de 45dp
                 Text(
-                    text = "Smith Wood",
+                    text = "Perez Perez",
                     modifier = Modifier
                         .background(
                             color = Color(0xFF880B56),
@@ -222,7 +222,7 @@ fun datosPerfilConductor1() {
                 Spacer(modifier = Modifier.height(45.dp)) // Espaciado de 45dp
                 // No. Boleta
                 Text(
-                    text = "2021454847",
+                    text = "2022366545",
                     modifier = Modifier
                         .background(
                             color = Color(0xFF880B56),
@@ -236,7 +236,7 @@ fun datosPerfilConductor1() {
                 Spacer(modifier = Modifier.height(45.dp)) // Espaciado de 45dp
                 // Edad
                 Text(
-                    text = "22 años",
+                    text = "23 años",
                     modifier = Modifier
                         .background(
                             color = Color(0xFF880B56),
@@ -250,7 +250,7 @@ fun datosPerfilConductor1() {
                 Spacer(modifier = Modifier.height(45.dp)) // Espaciado de 45dp
                 // Horario debajo de Edad
                 Text(
-                    text = "QF-8965",
+                    text = "MG-7896",
                     modifier = Modifier
                         .background(
                             color = Color(0xFF880B56),
@@ -270,10 +270,8 @@ fun datosPerfilConductor1() {
 
 @Preview(showBackground = true)
 @Composable
-fun pantallaRegistroPreviewConductor1()
+fun pantallaRegistroPreviewConductor2()
 {
-    pantallaMenuRegistroConductor1()
+    pantallaMenuRegistroConductor2()
 }
-
-
 
