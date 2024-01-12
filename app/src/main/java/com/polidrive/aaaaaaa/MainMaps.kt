@@ -108,34 +108,47 @@ fun MapScreen(onMarkerAdded: (LatLng) -> Unit, navController: NavController) {
                 }
             ) {
 
-                // Marcadores predefinidos
-                listOf(escom, conductor, pasajero).forEach { location ->
+                Marker(
+                    state = MarkerState(position = escom),
+                    title = "ESCOM",
+                    snippet = "",
+                    icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE),
+
+                    )
+                Marker(
+                    state = MarkerState(position = pasajero),
+                    title = "Yo",
+                    snippet = "",
+                    icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE),
+
+                    )
+                Marker(
+                    state = MarkerState(position = conductor),
+                    title = "Conductor",
+                    snippet = "",
+                    icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED),
+
+                    )
+                markersDrivers()
+                markersPassengers()
+                //Polyline(points = listOf(escom, conductor, pasajero))
+                Log.d("RouteData", "polyline 1")
+
+                Polyline(
+                    points = routePoints,
+                    color = Color(0xFF880B56)
+                )
+
+                minutos /= 60
+                kilometros /= 1000
+                Log.d("RouteData", "antes del Marker")
+                if (routePoints.size > 0) {
                     Marker(
-                        state = MarkerState(position = location),
-                        title = "Marcador",
-                        snippet = "",
-                        icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE),
-
+                        state = MarkerState(position = routePoints[routePoints.size / 2]),
+                        title = "Distancia y tiempo",
+                        snippet = "$kilometros km. / $minutos min. "
+                        //icon = BitmapDescriptorFactory.fromBitmap(/*imagen*/ )
                     )
-                    Polyline(points = listOf(escom, conductor, pasajero))
-                    Log.d("RouteData", "polyline 1")
-
-                    Polyline(
-                        points = routePoints,
-                        color = Color.Green
-                    )
-
-                    minutos /= 60
-                    kilometros /= 1000
-                    Log.d("RouteData", "antes del Marker")
-                    if (routePoints.size > 0) {
-                        Marker(
-                            state = MarkerState(position = routePoints[routePoints.size / 2]),
-                            title = "Distancia y tiempo",
-                            snippet = "$kilometros km. / $minutos min. "
-                            //icon = BitmapDescriptorFactory.fromBitmap(/*imagen*/ )
-                        )
-                    }
                 }
             }
         }
@@ -150,6 +163,94 @@ fun MapScreen(onMarkerAdded: (LatLng) -> Unit, navController: NavController) {
             //routePoints = createRoute()
         }
     }
+}
+@Composable
+fun markersPassengers() {
+    val pasajero1 = LatLng(19.40414558060961, -99.06731723731765)
+    val pasajero2 = LatLng(19.524116159516037, -98.87802969941069)
+    val pasajero3 = LatLng(19.51548489573473, -99.21901573012362)
+    val pasajero4 = LatLng(19.46097744154532, -99.15143174185492)
+    val pasajero5 = LatLng(19.486985037894577, -99.09120833690753)
+    Marker(
+        state = MarkerState(position = pasajero1),
+        title = "Conductor 1",
+        snippet = "",
+        icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED),
+
+        )
+    Marker(
+        state = MarkerState(position = pasajero2),
+        title = "Conductor 2",
+        snippet = "",
+        icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED),
+
+        )
+    Marker(
+        state = MarkerState(position = pasajero5),
+        title = "Conductor 3",
+        snippet = "",
+        icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED),
+
+        )
+    Marker(
+        state = MarkerState(position = pasajero3),
+        title = "Conductor 5",
+        snippet = "",
+        icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED),
+
+        )
+    Marker(
+        state = MarkerState(position = pasajero4),
+        title = "Conductor 4",
+        snippet = "",
+        icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED),
+
+        )
+}
+
+@Composable
+fun markersDrivers() {
+    val conductor1 = LatLng(19.484170126641747, -99.08371369251475)
+    val conductor2 = LatLng(19.687986981579108, -98.8874899198942)
+    val conductor3 = LatLng(19.427046037822738, -99.12021927571992)
+    val conductor4 = LatLng(19.53564400615802, -99.23769692662425)
+    val conductor5 = LatLng(19.405184951059834, -99.06537907201522)
+
+    Marker(
+        state = MarkerState(position = conductor1),
+        title = "Conductor 1",
+        snippet = "",
+        icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE),
+
+        )
+    Marker(
+        state = MarkerState(position = conductor2),
+        title = "Conductor 2",
+        snippet = "",
+        icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE),
+
+        )
+    Marker(
+        state = MarkerState(position = conductor3),
+        title = "Conductor 3",
+        snippet = "",
+        icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE),
+
+        )
+    Marker(
+        state = MarkerState(position = conductor4),
+        title = "Conductor 5",
+        snippet = "",
+        icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE),
+
+        )
+    Marker(
+        state = MarkerState(position = conductor5),
+        title = "Conductor 4",
+        snippet = "",
+        icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE),
+
+        )
 }
 
 
