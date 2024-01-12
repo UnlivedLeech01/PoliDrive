@@ -37,11 +37,12 @@ fun MainMenuConductores(navController: NavController) {
             Spacer(modifier = Modifier.width(20.dp))
             Column {
                 Spacer(modifier = Modifier.height(30.dp))
-                Text(text = "Conductores",
+                Text(
+                    text = "Conductores",
                     fontSize = 40.sp,
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center
-                    )
+                )
                 driverList(navController)
             }
             Spacer(modifier = Modifier.width(20.dp))
