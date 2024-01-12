@@ -4,8 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.polidrive.aaaaaaa.DriverMap
 import com.polidrive.aaaaaaa.FirstScreen
-import com.polidrive.aaaaaaa.FirstScreen1
 import com.polidrive.aaaaaaa.FourthScreen
 import com.polidrive.aaaaaaa.MainMapScreen
 import com.polidrive.aaaaaaa.MainMenuConductores
@@ -46,6 +46,9 @@ fun AppNavigation(){
         }
         composable(AppScreens.Ruta1.route){
             MainMapScreen(navController)
+        }
+        composable(AppScreens.Ruta2.route){
+            DriverMap(navController)
         }
 
     }

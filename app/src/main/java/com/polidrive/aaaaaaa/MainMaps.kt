@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
@@ -14,6 +15,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
@@ -23,6 +25,7 @@ import com.google.maps.android.compose.Marker
 import com.google.maps.android.compose.MarkerState
 import com.google.maps.android.compose.Polyline
 import com.google.maps.android.compose.rememberCameraPositionState
+import com.polidrive.aaaaaaa.Navigation.AppScreens
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -89,44 +92,56 @@ fun MapScreen(onMarkerAdded: (LatLng) -> Unit, navController: NavController) {
             },
             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF880B56))
         ) {
-            Text(text = "Dios Ayudame:(")
+            Text(text = "Calcular Ruta")
             //routePoints = createRoute()
         }
-        GoogleMap(
-            modifier = Modifier.fillMaxSize(),
-            cameraPositionState = cameraPositionState,
-            onMapLongClick = { latLng ->
-                // Llama a la función de callback cada vez que se agrega un nuevo marcador
-                onMarkerAdded(latLng)
-            }
-        ) {
-            // Marcadores predefinidos
-            listOf(escom, conductor, pasajero).forEach { location ->
-                Marker(
-                    state = MarkerState(position = location),
-                    title = "Marcador",
-                    snippet = ""
-
-                )
-                Polyline(points = listOf(escom, conductor, pasajero))
-                Log.d("RouteData", "polyline 1")
-
-                Polyline(
-                    points = routePoints,
-                    color = Color.Green
-                )
-
-                minutos /= 60
-                kilometros /= 1000
-                Log.d("RouteData", "antes del Marker")
-                if(routePoints.size>0) {
+        Box(modifier = Modifier.height(700.dp)){
+            GoogleMap(
+                modifier = Modifier.fillMaxSize(),
+                cameraPositionState = cameraPositionState,
+                onMapLongClick = { latLng ->
+                    // Llama a la función de callback cada vez que se agrega un nuevo marcador
+                    onMarkerAdded(latLng)
+                }
+            ) {
+                // Marcadores predefinidos
+                listOf(escom, conductor, pasajero).forEach { location ->
                     Marker(
-                        state = MarkerState(position = routePoints[routePoints.size / 2]),
-                        title = "Distancia y tiempo",
-                        snippet = "$kilometros km. / $minutos min. "
+                        state = MarkerState(position = location),
+                        title = "Marcador",
+                        snippet = ""
+
                     )
+                    Polyline(points = listOf(escom, conductor, pasajero))
+                    Log.d("RouteData", "polyline 1")
+
+                    Polyline(
+                        points = routePoints,
+                        color = Color.Green
+                    )
+
+                    minutos /= 60
+                    kilometros /= 1000
+                    Log.d("RouteData", "antes del Marker")
+                    if (routePoints.size > 0) {
+                        Marker(
+                            state = MarkerState(position = routePoints[routePoints.size / 2]),
+                            title = "Distancia y tiempo",
+                            snippet = "$kilometros km. / $minutos min. "
+                        )
+                    }
                 }
             }
+        }
+        //Ruta intermedia
+        Button(
+            onClick = {
+                navController.navigate(route = AppScreens.Ruta2.route)
+            },
+            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF880B56))
+        ) {
+            Text(text = "Punto medio")
+            //routePoints = createRoute()
         }
     }
 }
