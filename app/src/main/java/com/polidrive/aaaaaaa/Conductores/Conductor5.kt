@@ -26,14 +26,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import com.polidrive.aaaaaaa.Navigation.AppScreens
 import com.polidrive.aaaaaaa.R
 
 
 @Composable
-fun pantallaMenuRegistroConductor5 (){
+fun pantallaMenuRegistroConductor5 (navController: NavController){
 
     Box(
         modifier = Modifier
@@ -83,7 +84,7 @@ fun pantallaMenuRegistroConductor5 (){
                 Row(Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.End){
                     Button(
-                        onClick = { /*TODO*/ },
+                        onClick = {navController.navigate(route = AppScreens.CONDUCTORES.route)},
                         colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000)),
 
 
@@ -270,10 +271,10 @@ fun datosPerfilConductor5() {
         }
     }//Aqui
 }
-
+/*
 @Preview(showBackground = true)
 @Composable
 fun pantallaRegistroPreviewConductor5()
 {
     pantallaMenuRegistroConductor5()
-}
+}*/

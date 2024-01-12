@@ -70,7 +70,7 @@ fun driverList(navController: NavController) {
                     //Nombre conductor
                     Spacer(modifier = Modifier.height(5.dp))
                     Text(
-                        text = "Conductor 1",
+                        text = "Wendy",
                         modifier = Modifier
                             .background(
                                 color = Color(0xFF880B56),
@@ -88,15 +88,128 @@ fun driverList(navController: NavController) {
                     ) {
                         //Auto
                         Button(
-                            onClick = { },
+                            onClick = { navController.navigate(route = AppScreens.Driver1.route)},
                             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000))
 
                         ) {
-                            Text(text = "Auto")
+                            Text(text = "Perfil")
                         }
                         //Ruta
                         Button(
                             onClick = { navController.navigate(route = AppScreens.Ruta1.route)
+                            },
+                            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000))
+
+                        ) {
+                            Text(text = "Ruta")
+                        }
+                        Spacer(modifier = Modifier.width(20.dp))
+
+                    }
+                }
+            }
+
+        }
+        Spacer(modifier = Modifier.height(30.dp))
+        Box(
+            modifier = Modifier
+                .background(color = Color(0xFFD8C3CC), RoundedCornerShape(20.dp))
+                .width(370.dp)
+        ) {
+            Row {
+                //De perfil
+                Image(
+                    painter = painterResource(id = R.drawable.persona_70),
+                    contentDescription = "foto de perfil"
+                )
+                Column {
+                    //Nombre conductor
+                    Spacer(modifier = Modifier.height(5.dp))
+                    Text(
+                        text = "Brenda",
+                        modifier = Modifier
+                            .background(
+                                color = Color(0xFF880B56),
+                                shape = RoundedCornerShape(20.dp)
+                            )
+                            .width(250.dp),
+                        textAlign = TextAlign.Center,
+                        fontSize = 20.sp,
+                        color = Color.White,
+
+                        )
+                    Row(
+                        modifier = Modifier.width(250.dp),
+                        horizontalArrangement = Arrangement.Center
+                    ) {
+                        //Auto
+                        Button(
+                            onClick = { navController.navigate(route = AppScreens.Driver2.route)
+                             },
+                            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000))
+
+                        ) {
+                            Text(text = "Perfil")
+                        }
+                        //Ruta
+                        Button(
+                            onClick = { /*TODO*/ },
+                            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000))
+
+                        ) {
+                            Text(text = "Ruta")
+                        }
+                        Spacer(modifier = Modifier.width(20.dp))
+
+                    }
+                }
+            }
+
+        }
+        Spacer(modifier = Modifier.height(30.dp))
+        Box(
+            modifier = Modifier
+                .background(color = Color(0xFFD8C3CC), RoundedCornerShape(20.dp))
+                .width(370.dp)
+        ) {
+            Row {
+                //De perfil
+                Image(
+                    painter = painterResource(id = R.drawable.persona_70),
+                    contentDescription = "foto de perfil"
+                )
+                Column {
+                    //Nombre conductor
+                    Spacer(modifier = Modifier.height(5.dp))
+                    Text(
+                        text = "Brayan Kenai",
+                        modifier = Modifier
+                            .background(
+                                color = Color(0xFF880B56),
+                                shape = RoundedCornerShape(20.dp)
+                            )
+                            .width(250.dp),
+                        textAlign = TextAlign.Center,
+                        fontSize = 20.sp,
+                        color = Color.White,
+
+                        )
+                    Row(
+                        modifier = Modifier.width(250.dp),
+                        horizontalArrangement = Arrangement.Center
+                    ) {
+                        //Auto
+                        Button(
+                            onClick = { navController.navigate(route = AppScreens.Driver4.route)
+                            },
+                            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000))
+
+                        ) {
+                            Text(text = "Perfil")
+                        }
+                        //Ruta
+                        Button(
+                            onClick = { navController.navigate(route = AppScreens.Driver2.route)
                             },
                             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000))
 
@@ -144,15 +257,16 @@ fun driverList(navController: NavController) {
                     ) {
                         //Auto
                         Button(
-                            onClick = { /*TODO*/ },
+                            onClick = { navController.navigate(route = AppScreens.Driver3.route) },
                             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000))
 
                         ) {
-                            Text(text = "Auto")
+                            Text(text = "Ivan Ian")
                         }
                         //Ruta
                         Button(
-                            onClick = { /*TODO*/ },
+                            onClick = {
+                            },
                             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000))
 
                         ) {
@@ -181,7 +295,7 @@ fun driverList(navController: NavController) {
                     //Nombre conductor
                     Spacer(modifier = Modifier.height(5.dp))
                     Text(
-                        text = "Conductor 1",
+                        text = "Yurgen",
                         modifier = Modifier
                             .background(
                                 color = Color(0xFF880B56),
@@ -199,125 +313,16 @@ fun driverList(navController: NavController) {
                     ) {
                         //Auto
                         Button(
-                            onClick = { /*TODO*/ },
+                            onClick = { navController.navigate(route = AppScreens.Driver5.route) },
                             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000))
 
                         ) {
-                            Text(text = "Auto")
+                            Text(text = "Perfil")
                         }
                         //Ruta
                         Button(
-                            onClick = { /*TODO*/ },
-                            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000))
-
-                        ) {
-                            Text(text = "Ruta")
-                        }
-                        Spacer(modifier = Modifier.width(20.dp))
-
-                    }
-                }
-            }
-
-        }
-        Spacer(modifier = Modifier.height(30.dp))
-        Box(
-            modifier = Modifier
-                .background(color = Color(0xFFD8C3CC), RoundedCornerShape(20.dp))
-                .width(370.dp)
-        ) {
-            Row {
-                //De perfil
-                Image(
-                    painter = painterResource(id = R.drawable.persona_70),
-                    contentDescription = "foto de perfil"
-                )
-                Column {
-                    //Nombre conductor
-                    Spacer(modifier = Modifier.height(5.dp))
-                    Text(
-                        text = "Conductor 1",
-                        modifier = Modifier
-                            .background(
-                                color = Color(0xFF880B56),
-                                shape = RoundedCornerShape(20.dp)
-                            )
-                            .width(250.dp),
-                        textAlign = TextAlign.Center,
-                        fontSize = 20.sp,
-                        color = Color.White,
-
-                        )
-                    Row(
-                        modifier = Modifier.width(250.dp),
-                        horizontalArrangement = Arrangement.Center
-                    ) {
-                        //Auto
-                        Button(
-                            onClick = { /*TODO*/ },
-                            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000))
-
-                        ) {
-                            Text(text = "Auto")
-                        }
-                        //Ruta
-                        Button(
-                            onClick = { /*TODO*/ },
-                            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000))
-
-                        ) {
-                            Text(text = "Ruta")
-                        }
-                        Spacer(modifier = Modifier.width(20.dp))
-
-                    }
-                }
-            }
-
-        }
-        Spacer(modifier = Modifier.height(30.dp))
-        Box(
-            modifier = Modifier
-                .background(color = Color(0xFFD8C3CC), RoundedCornerShape(20.dp))
-                .width(370.dp)
-        ) {
-            Row {
-                //De perfil
-                Image(
-                    painter = painterResource(id = R.drawable.persona_70),
-                    contentDescription = "foto de perfil"
-                )
-                Column {
-                    //Nombre conductor
-                    Spacer(modifier = Modifier.height(5.dp))
-                    Text(
-                        text = "Conductor 1",
-                        modifier = Modifier
-                            .background(
-                                color = Color(0xFF880B56),
-                                shape = RoundedCornerShape(20.dp)
-                            )
-                            .width(250.dp),
-                        textAlign = TextAlign.Center,
-                        fontSize = 20.sp,
-                        color = Color.White,
-
-                        )
-                    Row(
-                        modifier = Modifier.width(250.dp),
-                        horizontalArrangement = Arrangement.Center
-                    ) {
-                        //Auto
-                        Button(
-                            onClick = { /*TODO*/ },
-                            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000))
-
-                        ) {
-                            Text(text = "Auto")
-                        }
-                        //Ruta
-                        Button(
-                            onClick = { /*TODO*/ },
+                            onClick = {
+                            },
                             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000))
 
                         ) {

@@ -4,6 +4,11 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.polidrive.aaaaaaa.Conductores.pantallaMenuRegistroConductor1
+import com.polidrive.aaaaaaa.Conductores.pantallaMenuRegistroConductor2
+import com.polidrive.aaaaaaa.Conductores.pantallaMenuRegistroConductor3
+import com.polidrive.aaaaaaa.Conductores.pantallaMenuRegistroConductor4
+import com.polidrive.aaaaaaa.Conductores.pantallaMenuRegistroConductor5
 import com.polidrive.aaaaaaa.DriverMap
 import com.polidrive.aaaaaaa.FirstScreen
 import com.polidrive.aaaaaaa.FourthScreen
@@ -49,6 +54,21 @@ fun AppNavigation(){
         }
         composable(AppScreens.Ruta2.route){
             DriverMap(navController)
+        }
+        composable(AppScreens.Driver1.route){
+            pantallaMenuRegistroConductor1(navController)
+        }
+        composable(AppScreens.Driver2.route){
+            pantallaMenuRegistroConductor2(navController)
+        }
+        composable(AppScreens.Driver3.route){
+            pantallaMenuRegistroConductor3(navController)
+        }
+        composable(AppScreens.Driver4.route){
+            pantallaMenuRegistroConductor4(navController)
+        }
+        composable(AppScreens.Driver5.route){
+            pantallaMenuRegistroConductor5(navController)
         }
 
     }
