@@ -18,6 +18,10 @@ sealed class AppScreens(val route: String){
     object Driver3: AppScreens("Ruta_conductor_pasajero3")
     object Driver4: AppScreens("Ruta_conductor_pasajero4")
     object Driver5: AppScreens("Ruta_conductor_pasajero5")
+    object Driver6: AppScreens("Ruta_conductor_pasajero1212")
+
+
+    object PASAJEROS: AppScreens("Menu_conductor_y_pasajero11")
 
     object Passenger1: AppScreens("Ruta_conductor_pasajero6")
     object Passenger2: AppScreens("Ruta_conductor_pasajero7")

@@ -239,7 +239,7 @@ fun driverList(navController: NavController) {
                     //Nombre conductor
                     Spacer(modifier = Modifier.height(5.dp))
                     Text(
-                        text = "Conductor 1",
+                        text = "Ian Ivan",
                         modifier = Modifier
                             .background(
                                 color = Color(0xFF880B56),
@@ -261,7 +261,7 @@ fun driverList(navController: NavController) {
                             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000))
 
                         ) {
-                            Text(text = "Ivan Ian")
+                            Text(text = "Perfil")
                         }
                         //Ruta
                         Button(

@@ -38,7 +38,7 @@ fun MainMenuPasajeros(navController: NavController) {
             Column {
                 Spacer(modifier = Modifier.height(30.dp))
                 Text(
-                    text = "Conductores",
+                    text = "Pasajeros",
                     fontSize = 40.sp,
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center
@@ -70,7 +70,7 @@ fun passengerList(navController: NavController) {
                     //Nombre conductor
                     Spacer(modifier = Modifier.height(5.dp))
                     Text(
-                        text = "Wendy",
+                        text = "Marco Antonio",
                         modifier = Modifier
                             .background(
                                 color = Color(0xFF880B56),
@@ -88,7 +88,7 @@ fun passengerList(navController: NavController) {
                     ) {
                         //Auto
                         Button(
-                            onClick = { navController.navigate(route = AppScreens.Driver1.route)},
+                            onClick = { navController.navigate(route = AppScreens.Passenger1.route)},
                             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000))
 
                         ) {
@@ -96,7 +96,7 @@ fun passengerList(navController: NavController) {
                         }
                         //Ruta
                         Button(
-                            onClick = { navController.navigate(route = AppScreens.Ruta1.route)
+                            onClick = {
                             },
                             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000))
 
@@ -126,7 +126,7 @@ fun passengerList(navController: NavController) {
                     //Nombre conductor
                     Spacer(modifier = Modifier.height(5.dp))
                     Text(
-                        text = "Brenda",
+                        text = "Jorge Arturo",
                         modifier = Modifier
                             .background(
                                 color = Color(0xFF880B56),
@@ -144,7 +144,7 @@ fun passengerList(navController: NavController) {
                     ) {
                         //Auto
                         Button(
-                            onClick = { navController.navigate(route = AppScreens.Driver2.route)
+                            onClick = { navController.navigate(route = AppScreens.Passenger2.route)
                             },
                             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000))
 
@@ -182,7 +182,7 @@ fun passengerList(navController: NavController) {
                     //Nombre conductor
                     Spacer(modifier = Modifier.height(5.dp))
                     Text(
-                        text = "Brayan Kenai",
+                        text = "Sol Jarelly",
                         modifier = Modifier
                             .background(
                                 color = Color(0xFF880B56),
@@ -200,7 +200,7 @@ fun passengerList(navController: NavController) {
                     ) {
                         //Auto
                         Button(
-                            onClick = { navController.navigate(route = AppScreens.Driver4.route)
+                            onClick = { navController.navigate(route = AppScreens.Passenger3.route)
                             },
                             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000))
 
@@ -239,7 +239,7 @@ fun passengerList(navController: NavController) {
                     //Nombre conductor
                     Spacer(modifier = Modifier.height(5.dp))
                     Text(
-                        text = "Conductor 1",
+                        text = "Fernanda Michelle",
                         modifier = Modifier
                             .background(
                                 color = Color(0xFF880B56),
@@ -257,11 +257,11 @@ fun passengerList(navController: NavController) {
                     ) {
                         //Auto
                         Button(
-                            onClick = { navController.navigate(route = AppScreens.Driver3.route) },
+                            onClick = { navController.navigate(route = AppScreens.Passenger4.route) },
                             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000))
 
                         ) {
-                            Text(text = "Ivan Ian")
+                            Text(text = "Perfil")
                         }
                         //Ruta
                         Button(
@@ -295,7 +295,7 @@ fun passengerList(navController: NavController) {
                     //Nombre conductor
                     Spacer(modifier = Modifier.height(5.dp))
                     Text(
-                        text = "Yurgen",
+                        text = "Paul",
                         modifier = Modifier
                             .background(
                                 color = Color(0xFF880B56),
@@ -313,7 +313,7 @@ fun passengerList(navController: NavController) {
                     ) {
                         //Auto
                         Button(
-                            onClick = { navController.navigate(route = AppScreens.Driver5.route) },
+                            onClick = { navController.navigate(route = AppScreens.Passerger5.route) },
                             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000))
 
                         ) {

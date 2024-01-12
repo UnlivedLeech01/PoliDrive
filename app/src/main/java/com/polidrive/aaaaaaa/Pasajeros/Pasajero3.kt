@@ -24,7 +24,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
@@ -148,7 +147,7 @@ fun datosPerfilPasajero3() {
                 Spacer(modifier = Modifier.height(45.dp)) // Espaciado de 45dp
                 // Dirección
                 Text(
-                    text = "Cerca de Teotihuacan",
+                    text = "Teotihuacan",
                     modifier = Modifier
                         .background(
                             color = Color(0xFF880B56),

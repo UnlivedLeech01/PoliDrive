@@ -14,6 +14,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavController
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.maps.android.compose.GoogleMap
@@ -35,22 +36,6 @@ fun DriverMap (navController: NavController) {
     var start:String=""
     var end:String=""
     Column {
-        // ... tu UI existente ...
-
-        Button(
-            onClick = {
-                // Implementar la lógica para crear la ruta usando los marcadores seleccionados
-                if (selectedMarkers.size >= 3) {
-                    start = "${selectedMarkers[1].longitude},${selectedMarkers[1].latitude}"
-                    end = "${selectedMarkers[2].longitude},${selectedMarkers[2].latitude}"
-                    // Aquí iría la lógica para crear y mostrar la ruta
-
-                }
-            },
-            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF880B56))
-        ) {
-            Text(text = "Crear ruta")
-        }
 
         MapDriverScreen(onMarkerAdded = { latLng ->
             selectedMarkers = listOf(latLng) + selectedMarkers.take(2)
@@ -71,7 +56,7 @@ fun MapDriverScreen(onMarkerAdded: (LatLng) -> Unit) {
     val conductor = LatLng(19.60154401792762, -99.04025319106024)
     val pasajero = LatLng(19.570988301429786, -99.06338216354723)
     val cameraPositionState = rememberCameraPositionState {
-        position = CameraPosition.fromLatLngZoom(escom, 15f)
+        position = CameraPosition.fromLatLngZoom(pasajero, 15f)
     }
     var kilometros: Float = 0f
     var minutos: Float = 0f
@@ -110,10 +95,32 @@ fun MapDriverScreen(onMarkerAdded: (LatLng) -> Unit) {
                 snippet = ""
 
             )
-            Polyline(points = listOf(escom, conductor, pasajero))
+            //Polyline(points = listOf(escom, conductor, pasajero))
+            Marker(
+                state = MarkerState(position = escom),
+                title = "ESCOM",
+                snippet = "",
+                icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE),
+
+                )
+            Marker(
+                state = MarkerState(position = pasajero),
+                title = "Yo",
+                snippet = "",
+                icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW),
+
+                )
+            Marker(
+                state = MarkerState(position = conductor),
+                title = "Conductor",
+                snippet = "",
+                icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED),
+
+                )
 
             Polyline(points = routePoints,
-                color = Color.Green)
+                color = Color(0xFF880B56),
+                )
 
             minutos /= 60
             kilometros /= 1000
@@ -121,7 +128,9 @@ fun MapDriverScreen(onMarkerAdded: (LatLng) -> Unit) {
                 Marker(
                     state = MarkerState(position = routePoints[routePoints.size / 2]),
                     title = "Distancia y tiempo",
-                    snippet = "$kilometros km. / $minutos min. "
+                    snippet = "$kilometros km. / $minutos min. ",
+                    icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN
+                    )
                 )
             }
         }

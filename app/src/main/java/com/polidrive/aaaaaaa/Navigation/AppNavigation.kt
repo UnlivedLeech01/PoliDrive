@@ -14,6 +14,7 @@ import com.polidrive.aaaaaaa.FirstScreen
 import com.polidrive.aaaaaaa.FourthScreen
 import com.polidrive.aaaaaaa.MainMapScreen
 import com.polidrive.aaaaaaa.MainMenuConductores
+import com.polidrive.aaaaaaa.MainMenuPasajeros
 import com.polidrive.aaaaaaa.MainScreen
 import com.polidrive.aaaaaaa.MainScreen1
 import com.polidrive.aaaaaaa.Pasajeros.pantallaMenuRegistroPasajero1
@@ -24,6 +25,7 @@ import com.polidrive.aaaaaaa.Pasajeros.pantallaMenuRegistroPasajero5
 import com.polidrive.aaaaaaa.SecondScreen
 import com.polidrive.aaaaaaa.SplashScreen
 import com.polidrive.aaaaaaa.ThirdScreen
+import com.polidrive.aaaaaaa.pantallaMenuRegistroConductor6
 
 @Composable
 fun AppNavigation(){
@@ -75,6 +77,13 @@ fun AppNavigation(){
         composable(AppScreens.Driver5.route){
             pantallaMenuRegistroConductor5(navController)
         }
+        composable(AppScreens.Driver6.route){
+            pantallaMenuRegistroConductor6(navController)
+        }
+
+        composable(AppScreens.PASAJEROS.route){
+            MainMenuPasajeros(navController)
+        }
 
         composable(AppScreens.Passenger1.route){
             pantallaMenuRegistroPasajero1(navController)
@@ -91,6 +100,7 @@ fun AppNavigation(){
         composable(AppScreens.Passerger5.route){
             pantallaMenuRegistroPasajero5(navController)
         }
+
 
     }
 }

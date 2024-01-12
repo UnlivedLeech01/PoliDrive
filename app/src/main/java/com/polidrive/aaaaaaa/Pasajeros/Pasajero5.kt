@@ -105,7 +105,7 @@ fun datosPerfilPasajero5() {
                 // Nombre del usuario
                 Spacer(modifier = Modifier.height(10.dp)) // Espaciado de 45dp
                 Text(
-                    text = "YUG BUG",
+                    text = "Paul",
                     modifier = Modifier
                         .background(
                             color = Color(0xFF880B56),
@@ -179,7 +179,7 @@ fun datosPerfilPasajero5() {
                 // Rol
                 Spacer(modifier = Modifier.height(10.dp)) // Espaciado de 45dp
                 Text(
-                    text = "Wung Jimp",
+                    text = "E.T.",
                     modifier = Modifier
                         .background(
                             color = Color(0xFF880B56),

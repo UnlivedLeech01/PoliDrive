@@ -65,7 +65,7 @@ fun MapScreen(onMarkerAdded: (LatLng) -> Unit, navController: NavController) {
     val conductor = LatLng(19.60154401792762, -99.04025319106024)
     val pasajero = LatLng(19.570988301429786, -99.06338216354723)
     val cameraPositionState = rememberCameraPositionState {
-        position = CameraPosition.fromLatLngZoom(escom, 15f)
+        position = CameraPosition.fromLatLngZoom(pasajero, 15f)
     }
     var kilometros: Float = 0f
     var minutos: Float = 0f
@@ -119,7 +119,7 @@ fun MapScreen(onMarkerAdded: (LatLng) -> Unit, navController: NavController) {
                     state = MarkerState(position = pasajero),
                     title = "Yo",
                     snippet = "",
-                    icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE),
+                    icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW),
 
                     )
                 Marker(
@@ -146,7 +146,8 @@ fun MapScreen(onMarkerAdded: (LatLng) -> Unit, navController: NavController) {
                     Marker(
                         state = MarkerState(position = routePoints[routePoints.size / 2]),
                         title = "Distancia y tiempo",
-                        snippet = "$kilometros km. / $minutos min. "
+                        snippet = "$kilometros km. / $minutos min. ",
+                        icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)
                         //icon = BitmapDescriptorFactory.fromBitmap(/*imagen*/ )
                     )
                 }

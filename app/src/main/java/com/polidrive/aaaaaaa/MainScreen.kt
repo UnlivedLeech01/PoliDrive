@@ -278,7 +278,7 @@ fun RowLoginButton(
         Button(
             modifier = Modifier.fillMaxWidth(),
             onClick = { login(context)
-                        navController.navigate(route = AppScreens.Pantalla4.route)
+                        navController.navigate(route = AppScreens.Driver6.route)
                       },
             enabled = isValidPassword && isValidEmail,
 

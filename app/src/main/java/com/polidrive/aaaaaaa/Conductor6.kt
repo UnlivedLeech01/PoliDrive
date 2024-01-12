@@ -1,4 +1,4 @@
-package com.polidrive.aaaaaaa.Conductores
+package com.polidrive.aaaaaaa
 
 
 import androidx.compose.foundation.Image
@@ -29,7 +29,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.polidrive.aaaaaaa.R
+import com.polidrive.aaaaaaa.Navigation.AppScreens
 
 
 @Composable
@@ -83,7 +83,7 @@ fun pantallaMenuRegistroConductor6 (navController: NavController){
                 Row(Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.End){
                     Button(
-                        onClick = { /*TODO*/ },
+                        onClick = { navController.navigate(route = AppScreens.CONDUCTORES.route) },
                         colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000)),
 
 
@@ -92,12 +92,10 @@ fun pantallaMenuRegistroConductor6 (navController: NavController){
                     }
                     Spacer(modifier = Modifier.width(150.dp))
                     Button(
-                        onClick = { /*TODO*/ },
+                        onClick = {navController.navigate(route = AppScreens.PASAJEROS.route)  },
                         colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000)),
-
-
                         ) {
-                        Text(text = "Ruta")
+                        Text(text = "Pasajeros")
                     }
                     Text(text = "      ")
                 }
@@ -211,7 +209,7 @@ fun datosPerfilConductor6() {
                 Spacer(modifier = Modifier.height(45.dp)) // Espaciado de 45dp
                 // Apellidos
                 Text(
-                    text = "Conductora",
+                    text = "Ambos",
                     modifier = Modifier
                         .background(
                             color = Color(0xFF880B56),
