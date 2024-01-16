@@ -23,10 +23,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     AppNavigation()
-                    //MainMapScreen()
-                    //DriverMap()
-                    //mainMenuConductores()
-                    //pantallaMenuRegistro()
+
                 }
             }
         }
