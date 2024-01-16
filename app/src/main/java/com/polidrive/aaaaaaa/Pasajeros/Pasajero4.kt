@@ -24,7 +24,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
@@ -51,7 +50,7 @@ fun pantallaMenuRegistroPasajero4 (navController: NavController){
                     )
                     Spacer(modifier = Modifier.width(130.dp))
                     Image(
-                        painter = painterResource(id = R.drawable.gatopaisaje),
+                        painter = painterResource(id = R.drawable.f_elconfidencial_com_original_317_ae0_456_317ae0456e63bd37ce7fa809d5955672),
                         contentDescription = "foto de perfil",
                         modifier = Modifier
                             .size(80.dp)

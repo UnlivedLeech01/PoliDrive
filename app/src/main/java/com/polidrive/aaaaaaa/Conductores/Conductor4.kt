@@ -54,7 +54,7 @@ fun pantallaMenuRegistroConductor4(navController: NavController){
                     )
                     Spacer(modifier = Modifier.width(130.dp))
                     Image(
-                        painter = painterResource(id = R.drawable.ni_o),
+                        painter = painterResource(id = R.drawable.__xkpa4_jcy06qcmoipb1zaq),
                         contentDescription = "foto de perfil",
                         modifier = Modifier
                             .size(80.dp)
@@ -70,7 +70,7 @@ fun pantallaMenuRegistroConductor4(navController: NavController){
                     Spacer(modifier = Modifier.width(50.dp))
                     Box() {
                         androidx.compose.foundation.Image(
-                            painter = painterResource(id = R.drawable.ev_2),
+                            painter = painterResource(id = R.drawable.mercedes),
                             contentDescription = "Pa la chamba de garrafonero",
                             modifier = Modifier
                                 .size(275.dp)

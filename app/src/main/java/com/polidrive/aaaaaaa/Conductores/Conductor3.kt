@@ -54,7 +54,7 @@ fun pantallaMenuRegistroConductor3 (navController: NavController){
                     )
                     Spacer(modifier = Modifier.width(130.dp))
                     Image(
-                        painter = painterResource(id = R.drawable.hasbulla),
+                        painter = painterResource(id = R.drawable.buyerpersona),
                         contentDescription = "foto de perfil",
                         modifier = Modifier
                             .size(80.dp)
@@ -68,7 +68,7 @@ fun pantallaMenuRegistroConductor3 (navController: NavController){
                     Spacer(modifier = Modifier.width(50.dp))
                     Box() {
                         androidx.compose.foundation.Image(
-                            painter = painterResource(id = R.drawable.burrito),
+                            painter = painterResource(id = R.drawable.descarga),
                             contentDescription = "BurritoCoche",
                             modifier = Modifier
                                 .size(245.dp)

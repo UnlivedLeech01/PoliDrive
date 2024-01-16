@@ -49,7 +49,7 @@ fun pantallaMenuRegistroPasajero2 (navController: NavController){
                     )
                     Spacer(modifier = Modifier.width(130.dp))
                     Image(
-                        painter = painterResource(id = R.drawable.perrotraje),
+                        painter = painterResource(id = R.drawable.caracteristicas_de_una_persona_honesta_6247_600),
                         contentDescription = "foto de perfil",
                         modifier = Modifier
                             .size(80.dp)
